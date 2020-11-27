@@ -54,3 +54,48 @@ You'll see it does author connect to the remote server and starts producing bloc
 ```
 
 You will also see the server side report that it hands out connections.
+
+
+## Integration example
+
+This simply shows how to integrate _any_ remote Keystore into a substrate-based chain easily. Aside from `lib`, which contains the specific protocol and the example-server the only change we did compared to the original `node-template` (actually `node` of it only) was adding the `lib` as dependency (named `tssrs`) and then replace the given `remote_keystore` with one that matches on the particular uri-name:
+
+```diff
+
+diff --git a/src/service.rs b/src/service.rs
+index dcc35ea..9dda162 100644
+--- a/src/service.rs
++++ b/src/service.rs
+@@ -10,7 +10,7 @@ use sc_executor::native_executor_instance;
+ pub use sc_executor::NativeExecutor;
+ use sp_consensus_aura::sr25519::{AuthorityPair as AuraPair};
+ use sc_finality_grandpa::SharedVoterState;
+-use sc_keystore::LocalKeystore;
++use tssrs::client::RemoteKeystore;
+
+ // Our native executor instance.
+ native_executor_instance!(
+@@ -83,11 +83,14 @@ pub fn new_partial(config: &Configuration) -> Result<sc_service::PartialComponen
+ 	})
+ }
+
+-fn remote_keystore(_url: &String) -> Result<Arc<LocalKeystore>, &'static str> {
+-	// FIXME: here would the concrete keystore been build,
+-	//        must return a concrete type (NOT `LocalKeystore`) that
+-	//        implements `CryptoStore` and `SyncCryptoStore`
+-	Err("Remote Keystore not supported.")
++// WE have implemented this here to integrate the new url-scheme
++fn remote_keystore(url: &String) -> Result<Arc<RemoteKeystore>, String> {
++	if url.starts_with("tssrs+") {
++		RemoteKeystore::open(url[6..].to_string(), None)
++			.map(Arc::new)
++	} else {
++		Err("Remote Keystore not supported.".to_owned())
++	}
+ }
+
+ /// Builds a new service for a full client.
+
+```
+
+That's it.
