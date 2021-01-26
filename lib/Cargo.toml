@@ -16,11 +16,11 @@ jsonrpc-derive = "14.2.1"
 jsonrpc-core = "14.2.0"
 jsonrpc-core-client = "14.0"
 jsonrpc-client-transports = { version = "14.2.1", optional = true }
-sp-core = { version = "2.0.0", git = "https://github.com/paritytech/substrate", branch = "ben-remote-signer" }
-sp-consensus-babe = { version = "0.8.0", git = "https://github.com/paritytech/substrate", branch = "ben-remote-signer", optional = true }
-sp-application-crypto = { version = "2.0.0", git = "https://github.com/paritytech/substrate", branch = "ben-remote-signer" }
-sc-keystore = { version = "2.0.0", git = "https://github.com/paritytech/substrate", branch = "ben-remote-signer", optional = true }
-sp-keystore = { version = "0.8.0", git = "https://github.com/paritytech/substrate", branch = "ben-remote-signer" }
+sp-core = { version = "2.0.0", git = "https://github.com/paritytech/substrate", branch = "master" }
+sp-consensus-babe = { version = "0.8.0", git = "https://github.com/paritytech/substrate", branch = "master", optional = true }
+sp-application-crypto = { version = "2.0.0", git = "https://github.com/paritytech/substrate", branch = "master" }
+sc-keystore = { version = "2.0.0", git = "https://github.com/paritytech/substrate", branch = "master", optional = true }
+sp-keystore = { version = "0.8.0", git = "https://github.com/paritytech/substrate", branch = "master" }
 
 futures = { version = "0.3.5", features = ["compat"] }
 parking_lot = "0.11"

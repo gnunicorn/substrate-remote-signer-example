@@ -12,9 +12,9 @@ repository = "https://github.com/paritytech/substrate/"
 [dependencies]
 se-remote-signer = { package = "substrate-example-tssrs", version = "0.1.0", path = "../lib" }
 structopt = { version = "0.3", default-features = false }
-sc-cli = { version = "0.8.0", git = "https://github.com/paritytech/substrate", branch = "ben-remote-signer" }
-sc-keystore = { version = "2.0.0", git = "https://github.com/paritytech/substrate", branch = "ben-remote-signer" }
-sc-service = { version = "0.8.0", git = "https://github.com/paritytech/substrate", branch = "ben-remote-signer" }
+sc-cli = { version = "0.8.0", git = "https://github.com/paritytech/substrate", branch = "master" }
+sc-keystore = { version = "2.0.0", git = "https://github.com/paritytech/substrate", branch = "master" }
+sc-service = { version = "0.8.0", git = "https://github.com/paritytech/substrate", branch = "master" }
 jsonrpc-http-server = { version = "14.2.0" }
 jsonrpc-ws-server = { version = "14.2.0" }
 tokio = { version = "0.2", features = ["full"] }

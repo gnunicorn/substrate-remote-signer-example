@@ -23,42 +23,43 @@ structopt = "0.3.8"
 tssrs = { package = "substrate-example-tssrs", path = "./lib", features = ["client"] }
 
 
-sc-cli = { version = "0.8.0", git = "https://github.com/paritytech/substrate", branch = "ben-remote-signer",  features = ["wasmtime"] }
-sp-core = { version = "2.0.0", git = "https://github.com/paritytech/substrate", branch = "ben-remote-signer" }
-sc-executor = { version = "0.8.0", git = "https://github.com/paritytech/substrate", branch = "ben-remote-signer",  features = ["wasmtime"] }
-sc-service = { version = "0.8.0", git = "https://github.com/paritytech/substrate", branch = "ben-remote-signer",  features = ["wasmtime"] }
-sc-keystore = { version = "2.0.0", git = "https://github.com/paritytech/substrate", branch = "ben-remote-signer" }
-sp-inherents = { version = "2.0.0", git = "https://github.com/paritytech/substrate", branch = "ben-remote-signer" }
-sc-transaction-pool = { version = "2.0.0", git = "https://github.com/paritytech/substrate", branch = "ben-remote-signer" }
-sp-transaction-pool = { version = "2.0.0", git = "https://github.com/paritytech/substrate", branch = "ben-remote-signer" }
-sc-consensus-aura = { version = "0.8.0", git = "https://github.com/paritytech/substrate", branch = "ben-remote-signer" }
-sp-consensus-aura = { version = "0.8.0", git = "https://github.com/paritytech/substrate", branch = "ben-remote-signer" }
-sp-consensus = { version = "0.8.0", git = "https://github.com/paritytech/substrate", branch = "ben-remote-signer" }
-sc-consensus = { version = "0.8.0", git = "https://github.com/paritytech/substrate", branch = "ben-remote-signer" }
-sc-finality-grandpa = { version = "0.8.0", git = "https://github.com/paritytech/substrate", branch = "ben-remote-signer" }
-sp-finality-grandpa = { version = "2.0.0", git = "https://github.com/paritytech/substrate", branch = "ben-remote-signer" }
-sc-client-api = { version = "2.0.0", git = "https://github.com/paritytech/substrate", branch = "ben-remote-signer" }
-sp-runtime = { version = "2.0.0", git = "https://github.com/paritytech/substrate", branch = "ben-remote-signer" }
+sc-cli = { version = "0.8.0", git = "https://github.com/paritytech/substrate", branch = "master",  features = ["wasmtime"] }
+sp-core = { version = "2.0.0", git = "https://github.com/paritytech/substrate", branch = "master" }
+sc-executor = { version = "0.8.0", git = "https://github.com/paritytech/substrate", branch = "master",  features = ["wasmtime"] }
+sc-service = { version = "0.8.0", git = "https://github.com/paritytech/substrate", branch = "master",  features = ["wasmtime"] }
+sc-keystore = { version = "2.0.0", git = "https://github.com/paritytech/substrate", branch = "master" }
+sc-telemetry = { version = "2.0.0", git = "https://github.com/paritytech/substrate", branch = "master" }
+sp-inherents = { version = "2.0.0", git = "https://github.com/paritytech/substrate", branch = "master" }
+sc-transaction-pool = { version = "2.0.0", git = "https://github.com/paritytech/substrate", branch = "master" }
+sp-transaction-pool = { version = "2.0.0", git = "https://github.com/paritytech/substrate", branch = "master" }
+sc-consensus-aura = { version = "0.8.0", git = "https://github.com/paritytech/substrate", branch = "master" }
+sp-consensus-aura = { version = "0.8.0", git = "https://github.com/paritytech/substrate", branch = "master" }
+sp-consensus = { version = "0.8.0", git = "https://github.com/paritytech/substrate", branch = "master" }
+sc-consensus = { version = "0.8.0", git = "https://github.com/paritytech/substrate", branch = "master" }
+sc-finality-grandpa = { version = "0.8.0", git = "https://github.com/paritytech/substrate", branch = "master" }
+sp-finality-grandpa = { version = "2.0.0", git = "https://github.com/paritytech/substrate", branch = "master" }
+sc-client-api = { version = "2.0.0", git = "https://github.com/paritytech/substrate", branch = "master" }
+sp-runtime = { version = "2.0.0", git = "https://github.com/paritytech/substrate", branch = "master" }
 
 # These dependencies are used for the node template's RPCs
 jsonrpc-core = "15.1.0"
-sc-rpc = { version = "2.0.0", git = "https://github.com/paritytech/substrate", branch = "ben-remote-signer" }
-sp-api = { version = "2.0.0", git = "https://github.com/paritytech/substrate", branch = "ben-remote-signer" }
-sc-rpc-api = { version = "0.8.0", git = "https://github.com/paritytech/substrate", branch = "ben-remote-signer" }
-sp-blockchain = { version = "2.0.0", git = "https://github.com/paritytech/substrate", branch = "ben-remote-signer" }
-sp-block-builder = { version = "2.0.0", git = "https://github.com/paritytech/substrate", branch = "ben-remote-signer" }
-sc-basic-authorship = { version = "0.8.0", git = "https://github.com/paritytech/substrate", branch = "ben-remote-signer" }
-substrate-frame-rpc-system = { version = "2.0.0", git = "https://github.com/paritytech/substrate", branch = "ben-remote-signer" }
-pallet-transaction-payment-rpc = { version = "2.0.0", git = "https://github.com/paritytech/substrate", branch = "ben-remote-signer" }
+sc-rpc = { version = "2.0.0", git = "https://github.com/paritytech/substrate", branch = "master" }
+sp-api = { version = "2.0.0", git = "https://github.com/paritytech/substrate", branch = "master" }
+sc-rpc-api = { version = "0.8.0", git = "https://github.com/paritytech/substrate", branch = "master" }
+sp-blockchain = { version = "2.0.0", git = "https://github.com/paritytech/substrate", branch = "master" }
+sp-block-builder = { version = "2.0.0", git = "https://github.com/paritytech/substrate", branch = "master" }
+sc-basic-authorship = { version = "0.8.0", git = "https://github.com/paritytech/substrate", branch = "master" }
+substrate-frame-rpc-system = { version = "2.0.0", git = "https://github.com/paritytech/substrate", branch = "master" }
+pallet-transaction-payment-rpc = { version = "2.0.0", git = "https://github.com/paritytech/substrate", branch = "master" }
 
 # These dependencies are used for runtime benchmarking
-frame-benchmarking = { version = "2.0.0", git = "https://github.com/paritytech/substrate", branch = "ben-remote-signer" }
-frame-benchmarking-cli = { version = "2.0.0", git = "https://github.com/paritytech/substrate", branch = "ben-remote-signer" }
+frame-benchmarking = { version = "2.0.0", git = "https://github.com/paritytech/substrate", branch = "master" }
+frame-benchmarking-cli = { version = "2.0.0", git = "https://github.com/paritytech/substrate", branch = "master" }
 
-node-template-runtime = { version = "2.0.0", git = "https://github.com/paritytech/substrate", branch = "ben-remote-signer" }
+node-template-runtime = { version = "2.0.0", git = "https://github.com/paritytech/substrate", branch = "master" }
 
 [build-dependencies]
-substrate-build-script-utils = { version = "2.0.0", git = "https://github.com/paritytech/substrate", branch = "ben-remote-signer" }
+substrate-build-script-utils = { version = "2.0.0", git = "https://github.com/paritytech/substrate", branch = "master" }
 
 [features]
 default = []
